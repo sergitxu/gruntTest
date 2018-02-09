@@ -14,23 +14,23 @@ module.exports = function (grunt){
 				src: [
 					'js/*.js', // All JS in the js folder
 				],
-				dest: 'js/build/production.js',
+				dest: 'js/production.js',
 			}
 		},
       
       uglify: {
           build: {
-              src: 'js/build/production.js',
-              dest: 'js/build/production.min.js'
+              src: 'js/production.js',
+              dest: 'build/js/production.min.js'
           }
       },
-      imagemin: {
+        imagemin: {
           dynamic: {
               files: [{
                   expand: true,
                   cwd: 'img/',
-                  src: ['**/*.{png,jpg,gif}'],
-                  dest: 'img/build/'
+                  src: ['*.{png,jpg,gif}'],
+                  dest: 'build/img'
               }]
           }
       },
@@ -67,7 +67,7 @@ module.exports = function (grunt){
                   style: 'compressed'
               },
               files: {
-                  'css/build/global.css': 'css/main.scss'
+                  'build/css/global.css': 'css/main.scss'
               }
           } 
       }
