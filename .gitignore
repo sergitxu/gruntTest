@@ -1,0 +1,7 @@
+# Files to be ignored by Git #
+# Compiled source # 
+
+/build
+/node_modules
+npm-debug.log
+.sass-cache/
